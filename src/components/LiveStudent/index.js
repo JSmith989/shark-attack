@@ -14,7 +14,7 @@ class LiveStudent extends Component {
       <div className='col-3'>
         <Card>
           <CardBody>
-            <CardTitle tag='h5'>
+            <CardTitle tag='p'>
               {firstName} {lastName}
             </CardTitle>
           </CardBody>

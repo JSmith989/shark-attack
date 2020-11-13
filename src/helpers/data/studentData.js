@@ -145,4 +145,9 @@ const livingStudents = () => students.filter((student) => student.isDead === fal
 
 const dearlyBeloved = () => students.filter((student) => student.isDead === true);
 
-export default { livingStudents, dearlyBeloved };
+const followTheLight = (id) => {
+  const changeValue = students.find((student) => id === student.id);
+  changeValue.isDead = true;
+};
+
+export default { livingStudents, dearlyBeloved, followTheLight };

@@ -9,11 +9,24 @@ class App extends React.Component {
     deadStudents: studentData.dearlyBeloved(),
   };
 
+  sharkAttack = () => {
+    if (this.state.livingStudents.length) {
+      const randomStudent = this.state.livingStudents[
+        Math.floor(Math.random() * this.state.livingStudents.length)
+      ].id;
+      studentData.followTheLight(randomStudent);
+      this.setState({
+        livingStudents: studentData.livingStudents(),
+        deadStudents: studentData.dearlyBeloved(),
+      });
+    }
+  };
+
   render() {
     const { livingStudents } = this.state;
     return (
       <div className='App'>
-        <h2>SHARK ATTACK</h2>
+        <button onClick={this.sharkAttack}>SHARK ATTACK</button>
         <SharkTank livingStudents={livingStudents} />
       </div>
     );
