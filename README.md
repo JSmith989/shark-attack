@@ -9,7 +9,7 @@ https://killer-shark.netlify.app/
 ![img](https://user-images.githubusercontent.com/67443077/99034157-25f7d400-2542-11eb-9cdc-a100cd7a0c7f.png)
 
 ### Code Snippet
-```
+````
 class DeadStudent extends Component {
   render() {
     const { firstName, lastName, imageUrl } = this.props.student;
@@ -27,5 +27,5 @@ class DeadStudent extends Component {
     );
   }
 }
-```
+````
 
