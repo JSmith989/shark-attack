@@ -3,7 +3,6 @@ import {
   Card,
   CardTitle,
   CardImg,
-  CardBody,
 } from 'reactstrap';
 
 class DeadStudent extends Component {
@@ -11,13 +10,12 @@ class DeadStudent extends Component {
     const { firstName, lastName, imageUrl } = this.props.student;
 
     return (
-      <div className='col-3 border border-danger'>
-        <Card>
-          <CardBody>
-            <CardTitle tag='p'>
+      <div className='col-3 m-1'>
+        <Card className='graveCard' >
+            <CardTitle tag='p'><del>
               {firstName} {lastName}
+              </del>
             </CardTitle>
-          </CardBody>
           <CardImg top width='100%' src={imageUrl} alt='Student Image' className="rounded-circle" />
         </Card>
       </div>

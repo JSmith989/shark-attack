@@ -3,7 +3,6 @@ import {
   Card,
   CardTitle,
   CardImg,
-  CardBody,
 } from 'reactstrap';
 
 class LiveStudent extends Component {
@@ -11,13 +10,11 @@ class LiveStudent extends Component {
     const { firstName, lastName, imageUrl } = this.props.student;
 
     return (
-      <div className='col-3'>
-        <Card>
-          <CardBody>
+      <div className='col-3 m-1'>
+        <Card className='studentCard'>
             <CardTitle tag='p'>
               {firstName} {lastName}
             </CardTitle>
-          </CardBody>
           <CardImg top width='100%' src={imageUrl} alt='Student Image' className="rounded-circle" />
         </Card>
       </div>

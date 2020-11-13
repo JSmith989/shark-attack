@@ -27,11 +27,19 @@ class App extends React.Component {
     const { livingStudents, deadStudents } = this.state;
     return (
       <div className='App'>
-        <h2>Shark Tank</h2>
-        <button onClick={this.sharkAttack}>SHARK ATTACK</button>
-        <SharkTank livingStudents={livingStudents} />
-        <h2>Graveyard</h2>
-        <Graveyard deadStudents={deadStudents} />
+        <div className='attack'>
+          <button className='btn btn-danger' onClick={this.sharkAttack}>SHARK ATTACK</button>
+        </div>
+        <div className='gridContainer'>
+          <div className='tank'>
+            <h2 className='tankHeader'>Shark Tank</h2>
+            <SharkTank livingStudents={livingStudents} />
+          </div>
+          <div className='yard'>
+            <h2 className='yardHeader'>Graveyard</h2>
+            <Graveyard deadStudents={deadStudents} />
+          </div>
+        </div>
       </div>
     );
   }
