@@ -2,6 +2,53 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import 'variables';
 
-body {
+.gridContainer {
   background-color: $favColor;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1px;
+}
+
+.tank {
+  background: $tankBackground no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.tankHeader {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.studentCard {
+  background: $studentBackground; 
+  color: white;
+}
+
+.yardHeader {
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.yard {
+  background: $yardBackground no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.graveCard {
+  background: $graveBackground no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: red;
+}
+
+.attack {
+  background: $attackBackground;
 }
