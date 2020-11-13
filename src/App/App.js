@@ -24,7 +24,6 @@ class App extends React.Component {
   };
 
   render() {
-    console.warn(this.state.deadStudents);
     const { livingStudents, deadStudents } = this.state;
     return (
       <div className='App'>
